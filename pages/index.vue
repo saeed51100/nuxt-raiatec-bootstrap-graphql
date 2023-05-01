@@ -3,6 +3,7 @@ const route = useRoute()
 </script>
 
 <template>
+  <TheHeader></TheHeader>
   <div class="m-5">
     <div class="btn btn-success">Success</div>
   </div>
