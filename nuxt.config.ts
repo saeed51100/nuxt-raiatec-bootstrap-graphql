@@ -5,7 +5,8 @@ export default defineNuxtConfig({
         '~/node_modules/bootstrap/dist/css/bootstrap.min.css',
     ],
     plugins: [
-        {src: "~/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js", mode: "client"}
+        // This line has conflict with devtools. resolve it later. saeed.doc
+        // {src: "~/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js", mode: "client"}
     ],
     modules: [
         '@nuxt/devtools'
