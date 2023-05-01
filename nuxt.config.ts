@@ -1,6 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-    // https://masanos.com/notes/ur-ogjt46yo/
+    // https://toolsnull.com/code-solution/the-best-way-to-include-bootstrap-in-nuxtjs
     css: [
         '~/node_modules/bootstrap/dist/css/bootstrap.min.css',
     ],
