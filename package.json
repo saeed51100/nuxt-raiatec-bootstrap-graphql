@@ -11,5 +11,8 @@
   "devDependencies": {
     "@nuxt/devtools": "^0.4.2",
     "nuxt": "^3.4.0"
+  },
+  "dependencies": {
+    "bootstrap": "^5.2.3"
   }
 }
