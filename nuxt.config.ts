@@ -10,5 +10,10 @@ export default defineNuxtConfig({
     ],
     modules: [
         '@nuxt/devtools'
-    ]
+    ],
+    runtimeConfig: {
+        public: {
+            wordpressUrl: 'http://localhost/test.raiatec.com/graphql'
+        }
+    }
 })

@@ -1,5 +1,25 @@
 <script setup lang="ts">
 const route = useRoute()
+const config = useRuntimeConfig();
+const {data, refresh, pending} = await useFetch(config.public.wordpressUrl, {
+  method: 'post',
+  body: {
+    query: `
+      query NewQuery {
+        posts(first:10){
+          nodes {
+            title
+            date
+            excerpt
+            uri
+          }
+        }
+      }`
+  },
+  transform(data) {
+    return data.data.posts.nodes as Array<Record<'title' | 'date' | 'excerpt' | 'uri', string>>;
+  }
+});
 </script>
 
 <template>
@@ -10,6 +30,6 @@ const route = useRoute()
   <div>
     <h1>Nuxt Routing set up successfully!</h1>
     <p>Current route: {{ route.path }}</p>
-    <a href="https://nuxt.com/docs/getting-started/routing" target="_blank">Learn more about Nuxt Routing</a>
+    <Post v-for="post in data" :key="post.uri" :post="post"></Post>
   </div>
 </template>
